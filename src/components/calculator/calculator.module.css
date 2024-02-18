@@ -1,0 +1,46 @@
+.calculator {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.button {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #d0cfcf;
+}
+
+.buttonAdd {
+    background-color: #ffa181;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.buttonAdd:active {
+    background-color: #FFA181AE;
+}
+
+
+
+
+
+
+
+
+
+
+
