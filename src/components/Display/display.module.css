@@ -11,7 +11,8 @@
 .result {
     padding: 5px 15px;
     background-color: #ededed;
-    border-radius: 5px
+    border-radius: 5px;
+    max-width: 300px;
 }
 .input {
     width: calc(100% - 20px);

@@ -1,12 +1,13 @@
 .calculator {
-    max-width: 400px;
+    max-width: 215px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
     gap: 5px;
 }
 .button {
@@ -17,11 +18,9 @@
     padding: 5px 10px;
     cursor: pointer;
 }
-
 .button:active {
     background-color: #d0cfcf;
 }
-
 .buttonAdd {
     background-color: #ffa181;
     border-radius: 50%;
@@ -29,6 +28,10 @@
     height: 50px;
     padding: 5px 10px;
     cursor: pointer;
+}
+.buttonAdd:last-child {
+    width: 100%;
+    border-radius: 10px;
 }
 .buttonAdd:active {
     background-color: #FFA181AE;

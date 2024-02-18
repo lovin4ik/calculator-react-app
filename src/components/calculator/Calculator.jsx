@@ -2,20 +2,23 @@ import React, {useState} from 'react';
 import classes from './calculator.module.css';
 import Display from "../Display/Display";
 const Calculator = () => {
+
     const [input, setInput] = useState('')
-    const [result, setresult] = useState(0)
+    const [result, setResult] = useState(0)
     const buttonClick = event => {
         if (event === '=') {
-            if (setInput === '') {
-                return
+            try {
+                setResult(eval(input))
+            } catch (error) {
+                setResult('Error')
             }
-            setresult(eval(input))
         } else setInput(input + event);
         if (event === 'C') {
             setInput('')
-            setresult(0)
+            setResult(0)
         }
     }
+
     return (
         <div className={classes.calculator}>
             <Display showinput={input} result={result} />
@@ -89,6 +92,11 @@ const Calculator = () => {
                     onClick={() => buttonClick(0)}
                     className={classes.button}
                 >0
+                </button>
+                <button
+                    onClick={() => buttonClick('.')}
+                    className={classes.button}
+                >.
                 </button>
                 <button
                     onClick={() => buttonClick('C')}
